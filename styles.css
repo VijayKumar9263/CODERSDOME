@@ -1,0 +1,697 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 94, 255);
+    padding: 25px 25px;
+    width: 100%;
+    color: white;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu .fas {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 30%;
+    height: 30%;
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.396);
+    border-radius: 10px;
+}
+
+/* Caption text */
+.text {
+    color: #000000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* Text Message Section */
+.text-message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0px;
+    border-radius: 10px;
+    animation: slideUp 1.5s forwards;
+}
+
+.text-message {
+    max-width: 60%;
+}
+
+.text-message h1 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    color: rgb(0, 94, 255);
+}
+
+.image-container {
+    max-width: 40%;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    animation: upAndDown 5s infinite alternate;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Up and Down Animation */
+@keyframes upAndDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+/* Get Started Button */
+.get-started-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(0, 94,255);
+    color: white;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.get-started-btn:hover {
+    background-color: darkblue;
+}
+
+.get-started-btn i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.get-started-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* About Section */
+#about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about-section .text-message {
+    max-width: 60%;
+}
+
+#about-section .image-container {
+    max-width: 40%;
+}
+
+#about-section h1 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    color: rgb(0, 94, 255);
+}
+
+#about-section .about-us {
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Courses Section */
+#courses-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#courses-section h1 {
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 94, 255);
+}
+
+#courses-section p {
+    margin-bottom: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.courses-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.courses-cards-wrapper {
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.courses-cards {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card {
+    flex: 0 0 calc(33.3333% - 20px); /* Adjusted to account for margins */
+    box-sizing: border-box;
+    margin: 10px; /* Ensure the margin fits within the overall width */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-info {
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: rgb(0, 94, 255);
+}
+
+.card p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+.scroll-button {
+    background-color: rgb(0, 94, 255);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.scroll-button:focus {
+    outline: none;
+}
+
+/* Scroll Up Button */
+#scroll-up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(38, 107, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    font-size: 20px;
+}
+
+#scroll-up-btn:hover {
+    background-color: darkblue;
+}
+
+/* Blog Section */
+
+#blog-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#blog-section h1 {
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 94, 255);
+}
+
+.blog-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    padding-left: 20px;
+    width: 600px; /* Adjust according to your design */
+    height: 340px;
+    border-radius: 10px 0 0 10px;
+}
+
+.blog-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.blog-info h3 {
+    margin-bottom: 10px;
+    color: rgb(0, 94, 255);
+}
+
+.blog-info .blog-date {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.blog-info .blog-excerpt {
+    margin-bottom: 20px;
+}
+
+
+/* Contact Us Section */
+
+#contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contact-section h1 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    color: rgb(0, 94, 255);
+    text-align: center; /* Center the text horizontally */
+}
+
+
+#contact-section .text-message {
+    max-width: 45%;
+}
+
+#contact-section .image-container {
+    max-width: 40%;
+}
+
+#contact-section .image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#contact-section form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button.send-btn {
+    background-color: rgb(0, 94, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.send-btn:hover {
+    background-color: darkblue;
+}
+
+.blog-post {
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(0, 94, 255);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    font-size: 22px;
+}
+
+
+/* Media Queries */
+
+/* Base styles for larger screens (desktops and laptops) */
+body, html {
+    font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* For tablets (landscape and portrait) */
+@media only screen and (max-width: 1024px) {
+    .navbar-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        flex-direction: column;
+        background-color: #fff;
+        border-left: 1px solid #ccc;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar-nav.active {
+        transform: translateX(0);
+    }
+
+    .text-message-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .text-message, .image-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .text-message {
+        margin-bottom: 20px;
+        text-align: left; /* Removing text justification */
+    }
+
+    .get-started-btn {
+        padding: 10px 15px;
+    }
+
+    .courses-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex: 0 0 90%;
+    }
+
+    .blog-card {
+        flex-direction: column;
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .slide-buttons {
+        display: none;
+    }
+
+    #contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #contact-section .text-message, #contact-section .image-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #contact-section .image-container {
+        margin-top: 20px;
+    }
+
+    .scroll-button{
+        display: none;
+    }
+}
+
+/* For phones (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        flex-direction: column;
+        background-color: #fff;
+        border-left: 1px solid #ccc;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar-nav.active {
+        transform: translateX(0);
+    }
+
+    .text-message-container {
+        padding: 10px;
+    }
+
+    .text-message h1 {
+        font-size: 1.5em;
+    }
+
+    .text-message p {
+        font-size: 1em;
+        text-align: left; /* Removing text justification */
+    }
+
+    .get-started-btn {
+        padding: 8px 12px;
+    }
+
+    .card {
+        flex: 0 0 100%;
+    }
+
+    .blog-card img {
+        height: auto;
+    }
+
+    .blog-info {
+        padding: 15px;
+    }
+
+    .slide-buttons {
+        display: none;
+    }
+
+    #contact-section .text-message h1 {
+        font-size: 1.8em;
+    }
+
+    #contact-section .text-message p {
+        font-size: 1em;
+        text-align: left; /* Removing text justification */
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        padding: 8px;
+    }
+
+    button.send-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
